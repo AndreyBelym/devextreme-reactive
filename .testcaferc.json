@@ -1,0 +1,11 @@
+{
+  "browsers": ["chrome:headless"],
+  "src": "./tests/**/*-testcafe.js",
+  "reporter": [{
+    "name": "xunit",
+    "output": "/tmp/testcafe-test-results/res.xml"
+  }, "spec"],
+  "skipJsErrors" : true,
+  "appCommand": "yarn run build:watch",
+  "appInitDelay": 60000
+}
