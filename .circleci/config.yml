@@ -12,7 +12,8 @@ jobs:
       - run: sudo chmod a+rwx /usr/local/bin/yarn
 
       - run: yarn --no-progress
-      - run: bash tests.sh
+      - run: yarn run build:watch &; sleep 60
+      - run: yarn run testcafe
 
       - store_test_results:
           path: /tmp/testcafe-test-results
@@ -21,5 +22,4 @@ workflows:
   version: 2
   tests:
     jobs:
-      - Jest Tests
       - TestCafe Tests
