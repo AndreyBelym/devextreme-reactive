@@ -1,9 +1,6 @@
 {	
   "browsers": ["chrome:headless --no-sandbox --disable-dev-shm-usage"],	
   "src": "./tests/**/*-testcafe.js",	
-  "reporter": [{	
-    "name": "xunit",	
-    "output": "/tmp/testcafe-test-results/res.xml"	
-  }, "spec"],	
+  "reporter": ["spec"],	
   "skipJsErrors" : true
 }
