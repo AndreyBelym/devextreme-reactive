@@ -1,5 +1,5 @@
 ./node_modules/.bin/testcafe -v
-./node_modules/.bin/testcafe "chrome:headless --disable-setuid-sandbox --no-sandbox" --hostname localhost --ports 1337,1338 &
+./node_modules/.bin/testcafe "chrome:/usr/bin/google-chrome:headless --disable-setuid-sandbox --no-sandbox" --hostname localhost --ports 1337,1338 &
 sleep 5
 
 echo Start Browser
