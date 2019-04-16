@@ -12,7 +12,7 @@ jobs:
       - run: sudo chmod a+rwx /usr/local/bin/yarn
 
       - run: yarn --no-progress
-      - run: yarn run build:watch &; sleep 60
+      - run: yarn run build:watch & sleep 60
       - run: yarn run testcafe
 
       - store_test_results:
