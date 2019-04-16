@@ -1,6 +1,21 @@
 version: 2
 
 jobs:
+  Jest Tests:	
+    docker:	
+      - image: circleci/node:8	
+
+     steps:	
+      - checkout	
+
+      - run: sudo npm i -g yarn	
+      - run: sudo chmod a+rwx /usr/local/bin/yarn	
+
+      - run: yarn --no-progress	
+      - run: yarn run build	
+      - run: yarn run lint	
+      - run: yarn run test:ci	
+      - run: yarn run build:site:docs
   TestCafe Tests:
     docker:
       - image: circleci/node:8-browsers
@@ -21,4 +36,5 @@ workflows:
   version: 2
   tests:
     jobs:
+      - Jest Tests
       - TestCafe Tests
