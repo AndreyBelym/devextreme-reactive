@@ -1,5 +1,5 @@
 {	
-  "browsers": ["chrome:headless"],	
+  "browsers": ["chrome:headless --no-sandbox --disable-dev-shm-usage"],	
   "src": "./tests/**/*-testcafe.js",	
   "reporter": [{	
     "name": "xunit",	
