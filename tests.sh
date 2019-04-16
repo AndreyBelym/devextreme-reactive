@@ -7,6 +7,6 @@ echo Start Browser
 # firefox -headless http://localhost:1337/browser/connect &
 #google-chrome --headless --remote-debugging-port=9222 http://localhost:1337/browser/connect &
 ps -ejf | grep chrome
-wait %1
+sleep 15
 cat log.txt
 # node -e "require('chrome-remote-interface')().then(() => console.log('OK'))"
