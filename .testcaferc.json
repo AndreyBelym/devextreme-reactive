@@ -1,6 +1,12 @@
 {	
-  "browsers": ["chrome:headless --no-sandbox --disable-dev-shm-usage"],	
+  "browsers": ["chrome:headless --disable-features=VizDisplayCompositor"],	
   "src": "./tests/**/*-testcafe.js",	
-  "reporter": ["spec"],	
+  "reporter": [
+    "spec",
+    {		  
+      "name": "xunit",		
+      "output": "/tmp/testcafe-test-results/res.xml"		
+    }
+  ],	
   "skipJsErrors" : true
 }
