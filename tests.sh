@@ -1,6 +1,5 @@
 ./node_modules/.bin/testcafe -v
-./node_modules/.bin/testcafe remote ./tests/**/*-testcafe.js --hostname localhost --ports 1337,1338 &
-yarn run build:watch &
+./node_modules/.bin/testcafe remote ./tests/**/*-testcafe.js --hostname localhost --app "yarn run build:watch" --app-init-delay 10000 --ports 1337,1338 &
 sleep 60
 echo Start Browser
 # firefox -headless http://localhost:1337/browser/connect &
