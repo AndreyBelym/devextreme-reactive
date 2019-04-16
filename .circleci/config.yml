@@ -12,9 +12,7 @@ jobs:
       - run: sudo chmod a+rwx /usr/local/bin/yarn
 
       - run: yarn --no-progress
-      - run: yarn run testcafe remote --hostname localhost --ports 1337,1338 &
-      - run: echo Start Browser
-      - run: google-chrome --no-sandbox --headless --remote-debugging-port=9220 http://localhost:1337
+      - run: bash tests.sh
 
       - store_test_results:
           path: /tmp/testcafe-test-results
