@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  Jest Tests	
+  Jest Tests:	
     docker:
       - image: circleci/node:8
 
