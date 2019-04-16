@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  Jest Tests:	
+  Jest Tests:
     docker:
       - image: circleci/node:8
 
@@ -16,7 +16,6 @@ jobs:
       - run: yarn run lint
       - run: yarn run test:ci
       - run: yarn run build:site:docs
-
   TestCafe Tests:
     docker:
       - image: circleci/node:8-browsers
