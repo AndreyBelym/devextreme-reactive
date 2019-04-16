@@ -1,5 +1,5 @@
 ./node_modules/.bin/testcafe -v
-./node_modules/.bin/testcafe "chrome:headless" --hostname localhost --ports 1337,1338 &
+./node_modules/.bin/testcafe "chrome:headless:userProfile" --hostname localhost --ports 1337,1338 &
 sleep 5
 echo Start Browser
 # firefox -headless http://localhost:1337/browser/connect &
